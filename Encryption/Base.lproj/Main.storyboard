@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wf9-zQ-gRT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fQB-4P-FHk">
+            <objects>
+                <viewController id="wf9-zQ-gRT" customClass="ViewController" customModule="Encryption" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ysW-Xp-8xB"/>
+                        <viewControllerLayoutGuide type="bottom" id="c80-hO-J7a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cqq-HQ-YH8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-5J-ISx">
+                                <rect key="frame" x="16" y="102" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wf9-zQ-gRT" id="QdF-XL-hHd"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QI1-nr-5Pc">
+                                <rect key="frame" x="16" y="140" width="343" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="KH1-82-fy0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1a-bD-M8E">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Extensions" id="PmL-Vf-5Wt">
+                                        <barButtonItem key="rightBarButtonItem" title="Encrypt" id="QuV-lO-7oe">
+                                            <connections>
+                                                <action selector="encrypt:" destination="wf9-zQ-gRT" id="TZb-bk-2p0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="lYf-lA-vtn">
+                                <rect key="frame" x="16" y="230" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lJL-6v-jZF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-m4-QBW">
+                                <rect key="frame" x="16" y="268" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="o6W-We-uss"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zcT-5J-ISx" firstAttribute="top" secondItem="Ttc-O1-HgR" secondAttribute="top" constant="82" id="19e-lp-pzi"/>
+                            <constraint firstItem="FkS-m4-QBW" firstAttribute="leading" secondItem="cqq-HQ-YH8" secondAttribute="leading" constant="16" id="B0h-Bf-AzY"/>
+                            <constraint firstItem="C1a-bD-M8E" firstAttribute="leading" secondItem="cqq-HQ-YH8" secondAttribute="leading" id="EHu-CY-31O"/>
+                            <constraint firstAttribute="trailing" secondItem="FkS-m4-QBW" secondAttribute="trailing" constant="16" id="GUN-Da-LZi"/>
+                            <constraint firstItem="QI1-nr-5Pc" firstAttribute="leading" secondItem="cqq-HQ-YH8" secondAttribute="leading" constant="16" id="NdW-Tx-KUx"/>
+                            <constraint firstAttribute="trailing" secondItem="zcT-5J-ISx" secondAttribute="trailing" constant="16" id="PNu-fp-emF"/>
+                            <constraint firstItem="QI1-nr-5Pc" firstAttribute="top" secondItem="zcT-5J-ISx" secondAttribute="bottom" constant="8" id="PcG-Sh-yka"/>
+                            <constraint firstAttribute="trailing" secondItem="lYf-lA-vtn" secondAttribute="trailing" constant="16" id="QZV-i0-TVo"/>
+                            <constraint firstAttribute="trailing" secondItem="QI1-nr-5Pc" secondAttribute="trailing" constant="16" id="RTW-oQ-mfj"/>
+                            <constraint firstItem="lYf-lA-vtn" firstAttribute="top" secondItem="QI1-nr-5Pc" secondAttribute="bottom" constant="8" id="S0a-Je-ql0"/>
+                            <constraint firstAttribute="trailing" secondItem="C1a-bD-M8E" secondAttribute="trailing" id="ZBd-iT-ly9"/>
+                            <constraint firstItem="C1a-bD-M8E" firstAttribute="top" secondItem="Ttc-O1-HgR" secondAttribute="top" id="eyC-Bu-tcV"/>
+                            <constraint firstItem="zcT-5J-ISx" firstAttribute="leading" secondItem="cqq-HQ-YH8" secondAttribute="leading" constant="16" id="ifx-ks-zIr"/>
+                            <constraint firstItem="lYf-lA-vtn" firstAttribute="leading" secondItem="cqq-HQ-YH8" secondAttribute="leading" constant="16" id="l8t-oZ-Dne"/>
+                            <constraint firstItem="FkS-m4-QBW" firstAttribute="top" secondItem="lYf-lA-vtn" secondAttribute="bottom" constant="8" id="pyK-2v-Y3z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ttc-O1-HgR"/>
+                    </view>
+                    <connections>
+                        <outlet property="aesDecryptLabel" destination="FkS-m4-QBW" id="sNG-Ab-pyz"/>
+                        <outlet property="aesEncryptLabel" destination="lYf-lA-vtn" id="EiS-Ik-Qqg"/>
+                        <outlet property="encryptedTextView" destination="QI1-nr-5Pc" id="MDL-15-PHL"/>
+                        <outlet property="entryTextField" destination="zcT-5J-ISx" id="9rB-Gn-tfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h29-7s-BqO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80.799999999999997" y="138.0809595202399"/>
+        </scene>
+    </scenes>
+</document>

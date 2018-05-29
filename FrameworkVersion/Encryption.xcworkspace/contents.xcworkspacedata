@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:TestEncryptionServices/TestEncryptionServices.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:EncryptionServices/EncryptionServices.xcodeproj">
+   </FileRef>
+</Workspace>
